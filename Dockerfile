@@ -28,7 +28,8 @@ RUN add-apt-repository ppa:ethereum/ethereum && \
     apt-get update && apt-get install -y solc
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
-    && apt-get install -y nodejs
+    && apt-get install -y nodejs \
+    && npm install --global yarn
 
 RUN curl -O https://storage.googleapis.com/golang/go1.10.2.linux-amd64.tar.gz \
     && tar -xvf go1.10.2.linux-amd64.tar.gz \
